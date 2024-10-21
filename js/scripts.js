@@ -2,6 +2,10 @@ window.addEventListener('load', function() {
     document.querySelector('.slide-left').classList.add('animate');
 });
 
+window.addEventListener('load', function() {
+    document.querySelector('.slide-right').classList.add('animate');
+});
+
 const form = document.getElementById('form');
 const result = document.getElementById('result');
 
