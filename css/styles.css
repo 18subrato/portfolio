@@ -23,6 +23,12 @@
       transform: translateX(0); /* Move to original position */
   }
 }
+
+.slide-right {
+  opacity: 0; /* Start invisible */
+  transform: translateX(100px); /* Start from the left */
+  animation: slideIn 1s forwards; /* Animation */
+}
 :root {
   --bs-blue: #1e30f3;
   --bs-indigo: #6610f2;
