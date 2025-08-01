@@ -19,6 +19,33 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css" rel="stylesheet" />
     <!-- Core theme CSS (includes Bootstrap)-->
     <link href="css/styles.css" rel="stylesheet" />
+    <style>
+        .slider {
+            overflow: hidden;
+            white-space: nowrap;
+        }
+        .slider-track {
+            display: inline-block;
+            animation: scroll-left 20s linear infinite;
+        }
+        .slider-track.reverse {
+            animation: scroll-right 20s linear infinite;
+        }
+        @keyframes scroll-left {
+            0% { transform: translateX(100%); }
+            100% { transform: translateX(-100%); }
+        }
+        @keyframes scroll-right {
+            0% { transform: translateX(-100%); }
+            100% { transform: translateX(100%); }
+        }
+        .slider-item {
+            display: inline-block;
+            text-align: center;
+            width: 120px;
+            margin: 0 10px;
+        }
+    </style>
 </head>
 
 <body class="d-flex flex-column h-100 bg-black">
@@ -26,7 +53,7 @@
         <!-- Navigation-->
         <nav class="navbar navbar-expand-lg navbar-dark bg-black py-3">
             <div class="container px-5">
-                <a class="navbar-brand" href="index.html"><span class="fw-bolder text-white">Portfolio</span></a>
+                <a class="navbar-brand" href="index.html"><span class="fw-bolder text-white">Subrato</span></a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
                     data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
                     aria-expanded="false" aria-label="Toggle navigation"><span
@@ -57,7 +84,7 @@
                         <div class="d-grid gap-2 mb-4">
                             <!-- Note: Set the link href target to a PDF file within your project-->
                             <a class="btn btn-primary px-4 py-3 align"
-                                href="https://drive.google.com/file/d/1kR5H663EPSFqsw3nTnYZIJgXEm1rz19l/view?usp=drive_link"
+                                href="https://drive.google.com/file/d/1PJgZNYK9qdwj-hLqSYJXHH_bLAB9ReTF/view?usp=drive_link"
                                 target="_blank">
                                 <div class="d-inline-block bi bi-download me-2"></div>
                                 Download Resume
@@ -174,7 +201,7 @@
                                                 <div class="text-secondary fw-bolder mb-2">2016-2018</div>
                                                 <div class="mb-2">
                                                     <div class="fs-4 fw-semibold">10 <sup>th</sup></div>
-                                                
+
                                                 </div>
                                                 <br>
                                                 <div>
@@ -202,90 +229,70 @@
                         <div class="pb-5"></div>
                         <!-- Skills Section-->
                         <section>
-                            <!-- Skillset Card-->
-                            <div class="card shadow border-0 rounded-4 mb-5">
-                                <div class="card-body p-5">
-                                    <!-- Professional skills list-->
-                                    <div class="mb-5">
-                                        <div class="d-flex align-items-center mb-4">
-                                            <div
-                                                class="feature bg-primary bg-gradient-primary-to-secondary text-white rounded-3 me-3">
-                                                <i class="bi bi-tools"></i>
-                                            </div>
-                                            <h3 class="fw-bolder mb-0"><span class="text-gradient d-inline">Professional
-                                                    Skills</span></h3>
-                                        </div>
-                                        <div class="row row-cols-1 row-cols-md-3 mb-4">
-                                            <!-- <div class="col mb-4 mb-md-0"><div class="d-flex align-items-center bg-light rounded-4 p-3 h-100">SEO/SEM Marketing</div></div>
-                                            <div class="col mb-4 mb-md-0"><div class="d-flex align-items-center bg-light rounded-4 p-3 h-100">Statistical Analysis</div></div> -->
-                                            <div class="col">
-                                                <div class="d-flex align-items-center bg-light rounded-4 p-3 h-100">Full Stack
-                                                    Development</div>
-                                            </div>
-                                        </div>
-                                        <div class="row row-cols-1 row-cols-md-3">
-                                            <!-- <div class="col mb-4 mb-md-0"><div class="d-flex align-items-center bg-light rounded-4 p-3 h-100">Network Security</div></div>
-                                            <div class="col mb-4 mb-md-0"><div class="d-flex align-items-center bg-light rounded-4 p-3 h-100">Adobe Software Suite</div></div> -->
-                                            <div class="col">
-                                                <div class="d-flex align-items-center bg-light rounded-4 p-3 h-100">
-                                                    Software Development</div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <!-- Languages list-->
-                                    <div class="mb-0">
-                                        <div class="d-flex align-items-center mb-4">
-                                            <div
-                                                class="feature bg-primary bg-gradient-primary-to-secondary text-white rounded-3 me-3">
-                                                <i class="bi bi-code-slash"></i>
-                                            </div>
-                                            <h3 class="fw-bolder mb-0"><span
-                                                    class="text-gradient d-inline">Languages</span>
-                                            </h3>
-                                        </div>
-                                        <div class="row row-cols-1 row-cols-md-3 mb-4">
-                                            <div class="col mb-4 mb-md-0">
-                                                <div class="d-flex align-items-center bg-light rounded-4 p-3 h-100">HTML
-                                                </div>
-                                            </div>
-                                            <div class="col mb-4 mb-md-0">
-                                                <div class="d-flex align-items-center bg-light rounded-4 p-3 h-100">CSS
-                                                </div>
-                                            </div>
-                                            <div class="col mb-4 mb-md-0">
-                                                <div class="d-flex align-items-center bg-light rounded-4 p-3 h-100">JavaScript
-                                                </div>
-                                            </div>
-                                            <div class="col mb-4 mb-md-0">
-                                                <div class="d-flex align-items-center bg-light rounded-4 p-3 h-100">
-                                                    React . js</div>
-                                            </div>
-                                            <div class="col mb-4 mb-md-0">
-                                                <div class="d-flex align-items-center bg-light rounded-4 p-3 h-100">
-                                                    Node . js</div>
-                                            </div>
-                                            <div class="col mb-4 mb-md-0">
-                                                <div class="d-flex align-items-center bg-light rounded-4 p-3 h-100">
-                                                    Express . js</div>
-                                            </div>
-                                            <div class="col mb-4 mb-md-0">
-                                                <div class="d-flex align-items-center bg-light rounded-4 p-3 h-100">C++
-                                                    (Programming Language)</div>
-                                            </div>
-                                            <div class="col mb-4 mb-md-0">
-                                                <div class="d-flex align-items-center bg-light rounded-4 p-3 h-100">
-                                                    Bootstrap & Tailwind Framework</div>
-                                            </div>
-                                            <div class="col mb-4 mb-md-0">
-                                                <div class="d-flex align-items-center bg-light rounded-4 p-3 h-100">
-                                                    mongoDB</div>
-                                            </div>
-                                           
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </section>
+    <div class="container py-5">
+        <h2 class="text-center text-gradient mb-4">Programming Languages</h2>
+
+        <!-- Row 1 - Left to Right -->
+        <div class="slider mb-4">
+            <div class="slider-track">
+                <div class="slider-item">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/cplusplus/cplusplus-original.svg" width="50" alt="C++">
+                    <div class="mt-2 text-white">C++</div>
+                </div>
+             
+                <div class="slider-item">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" width="50" alt="React">
+                    <div class="mt-2 text-white">React</div>
+                </div>
+                <div class="slider-item">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nextjs/nextjs-original.svg" width="50" alt="Next.js">
+                    <div class="mt-2 text-white">Next.js</div>
+                </div>
+                <div class="slider-item">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg" width="50" alt="TypeScript">
+                    <div class="mt-2 text-white">TypeScript</div>
+                </div>
+                <div class="slider-item">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" width="50" alt="JavaScript">
+                    <div class="mt-2 text-white">JavaScript</div>
+                </div>
+                <div class="slider-item">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" width="50" alt="CSS">
+                    <div class="mt-2 text-white">CSS</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Row 2 - Right to Left -->
+        <div class="slider">
+            <div class="slider-track reverse">
+                <div class="slider-item">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg" width="50" alt="MongoDB">
+                    <div class="mt-2 text-white">MongoDB</div>
+                </div>
+                <div class="slider-item">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg" width="50" alt="Node.js">
+                    <div class="mt-2 text-white">Node.js</div>
+                </div>
+               
+                <div class="slider-item">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/figma/figma-original.svg" width="50" alt="Figma">
+                    <div class="mt-2 text-white">Figma</div>
+                </div>
+                <div class="slider-item">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" width="50" alt="HTML">
+                    <div class="mt-2 text-white">HTML</div>
+                </div>
+                <div class="slider-item">
+                    <img src="https://www.vectorlogo.zone/logos/getpostman/getpostman-icon.svg" width="50" alt="Postman">
+                    <div class="mt-2 text-white">Postman</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+                            
                 </div>
             </div>
         </div>

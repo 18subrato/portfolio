@@ -19,6 +19,30 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css" rel="stylesheet" />
     <!-- Core theme CSS (includes Bootstrap)-->
     <link href="css/styles.css" rel="stylesheet" />
+    <style>
+        body {
+            cursor: none;
+            /* hide native cursor */
+        }
+
+        .dot {
+            position: fixed;
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            pointer-events: none;
+            z-index: 9999;
+            transform: translate(-50%, -50%);
+        }
+
+        #cursor-dot1 {
+            background: #d54ae1;
+        }
+
+        #cursor-dot2 {
+            background: #3529db;
+        }
+    </style>
 </head>
 
 <body class="d-flex flex-column h-100 bg-black">
@@ -30,7 +54,7 @@
 
         <nav class="navbar navbar-expand-lg navbar-dark bg-black py-3">
             <div class="container px-5">
-                <a class="navbar-brand" href="index.html"><span class="fw-bolder text-white">Portfolio</span></a>
+                <a class="navbar-brand" href="index.html"><span class="fw-bolder text-white">Subrato</span></a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
                     data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
                     aria-expanded="false" aria-label="Toggle navigation"><span
@@ -47,7 +71,7 @@
         </nav>
 
 
-        
+
         <!-- Header-->
         <header class="py-5">
             <div class="container px-5 pb-5">
@@ -55,9 +79,10 @@
                     <div class="col-xxl-5">
                         <!-- Header text content-->
                         <div class="text-center text-xxl-start slide-left">
-                            
+
                             <div class="badge bg-gradient-primary-to-secondary text-white mb-4">
-                                <div class="text-uppercase justify-content-center align-items-center">Full Stack Developer 
+                                <div class="text-uppercase justify-content-center align-items-center">Full Stack
+                                    Developer
                                 </div>
                             </div>
                             <div class="fs-3 fw-light text-white">I design and code beautifully simple things, and I
@@ -425,16 +450,45 @@
                     <div class="small m-0 text-white">Copyright &copy; subrato_portfolio</div>
                 </div>
                 <div class="col-auto">
-                    <!-- <a class="small" href="#!">Privacy</a>
-                    <span class="mx-1">&middot;</span>
-                    <a class="small" href="#!">Terms</a>
-                    <span class="mx-1">&middot;</span> -->
                     <a class="small" href="contact.html">Contact</a>
                 </div>
             </div>
         </div>
     </footer>
     <!-- Bootstrap core JS-->
+    <div id="cursor-dot1" class="dot"></div>
+    <div id="cursor-dot2" class="dot"></div>
+    <script>
+        const dot1 = document.getElementById("cursor-dot1");
+        const dot2 = document.getElementById("cursor-dot2");
+
+        let mouseX = 0;
+        let mouseY = 0;
+        let dot2X = 0;
+        let dot2Y = 0;
+
+        document.addEventListener("mousemove", (e) => {
+            mouseX = e.clientX;
+            mouseY = e.clientY;
+        });
+
+        function animate() {
+            // Dot1 follows instantly
+            dot1.style.left = `${mouseX}px`;
+            dot1.style.top = `${mouseY}px`;
+
+            // Dot2 eases toward Dot1
+            dot2X += (mouseX - dot2X) * 0.1;
+            dot2Y += (mouseY - dot2Y) * 0.1;
+
+            dot2.style.left = `${dot2X}px`;
+            dot2.style.top = `${dot2Y}px`;
+
+            requestAnimationFrame(animate);
+        }
+
+        animate();
+    </script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
     <!-- Core theme JS-->
     <script src="js/scripts.js"></script>
